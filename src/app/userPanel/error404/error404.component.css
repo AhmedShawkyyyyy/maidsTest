@@ -1,0 +1,10 @@
+.container {
+  background: var(--dark);
+}
+
+#backToHome {
+  width: 300px;
+  color: var(--light);
+  text-decoration: none;
+  border: 2px solid var(--dark);
+}

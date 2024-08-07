@@ -1,0 +1,50 @@
+<div *ngIf="isLoading" class="loading-spinner">
+  <loading></loading>
+</div>
+
+<div class="container mt-5" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-12 d-flex flex-wrap justify-content-center align-items-center">
+      <div class="col-lg-3 col-md-6 col-sm-12 m-3" *ngFor="let user of userList">
+        <div class="card" style="width: 20rem;" id="card" *ngIf="(searchText === 0) || user.id === searchText"
+          animate__zoomIn>
+          <h5 class="mt-1 ms-1" id="card-title" [ngStyle]="{color:'var(--primary)'}">User Info</h5>
+          <img [src]="user.avatar" class="card-img-top" alt="..." id="userImage">
+          <div class="card-body">
+            <!-- User ID -->
+            <div class="mt-1 w-100 d-flex justify-content-start">
+              <label>User ID:</label>
+              <span class="ms-3">{{ user.id }}</span>
+            </div>
+            <!-- User firstName -->
+            <div class="mt-1 w-100 d-flex justify-content-start">
+              <label>First Name:</label>
+              <span class="ms-3">{{ user.first_name }}</span>
+            </div>
+            <!-- User lastName -->
+            <div class="mt-1 w-100 d-flex justify-content-start">
+              <label>Last Name:</label>
+              <span class="ms-3">{{ user.last_name }}</span>
+            </div>
+            <!-- User email -->
+            <div class="mt-1 w-100 d-flex justify-content-start">
+              <label>Email:</label>
+              <span class="w-75">{{ user.email }}</span>
+            </div>
+            <!-- User to Details -->
+            <button class="cssbuttons-io-button text-center mt-3" routerLink="/user-details/{{ user.id }}">
+              to Details
+              <a class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

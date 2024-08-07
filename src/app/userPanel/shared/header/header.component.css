@@ -1,0 +1,124 @@
+.navbar {
+  background: var(--secondary) !important;
+}
+.navbar .nav-link {
+  color: var(--light);
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-link:hover {
+  scale: 1.3;
+}
+.navbar .navbar-brand {
+  color: var(--light);
+  animation: rollIn;
+  animation-duration: 2s;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .navbar-brand:hover {
+  scale: 1.3;
+}
+
+.navbar .navbar-toggler {
+  color: var(--light) !important;
+}
+
+#search {
+  background: var(--dark) !important;
+  color: var(--light);
+  border-color: var(--secondary);
+}
+#search::placeholder {
+  color: var(--light);
+}
+
+/* ========================= */
+.dropdown-toggle .fa-chevron-down {
+  transition: transform 0.5s ease;
+}
+
+.dropdown-toggle[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.navbar .navbar-nav .nav-link {
+  padding: 7px 20px;
+  color: #6c7293;
+  font-weight: 500;
+  border-left: 3px solid #191c24;
+  border-radius: 0 30px 30px 0;
+  outline: none;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-left: 25px;
+  padding: 12px 0;
+  color: #6c7293;
+  outline: none;
+}
+
+/* .navbar .sidebar-toggler,
+.navbar .navbar-nav .nav-link i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  border-radius: 40px;
+} */
+
+.navbar .dropdown-item {
+  color: #6c7293 !important;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+  background: #191c24 !important;
+}
+
+/* .navbar .dropdown-item:hover,
+.navbar .dropdown-item.active {
+  background: #000000 !important;
+} */
+
+.navbar .dropdown-toggle::after {
+  margin-left: 6px;
+  vertical-align: middle;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(-180deg);
+}
+.nav-item .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  clear: both;
+  font-weight: 400;
+  color: var(--bs-dropdown-link-color);
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #191c24;
+  border: 0;
+  border-radius: var(--bs-dropdown-item-border-radius, 0);
+}
+
+.dropdown-menu {
+  background-color: #191c24;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: black;
+}
+
+.mat-mdc-dialog-container,
+.mdc-dialog__surface {
+  border-radius: var(--mdc-dialog-container-shape, 4px);
+  background: black !important;
+  width: 500px;
+}

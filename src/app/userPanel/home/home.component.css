@@ -1,0 +1,4 @@
+#searchText p {
+  color: var(--light) !important;
+  font-size: 30px;
+}

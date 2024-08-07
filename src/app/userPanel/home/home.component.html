@@ -1,0 +1,6 @@
+<header (searchTextChange)="receiveSearchText($event)"></header>
+
+<div class="col-12 text-center mt-2" id="searchText" *ngIf="searchText !=0">
+  <p>Search by ID : {{searchText}}</p>
+</div>
+<usersList class="d-flex flex-wrap justify-content-center align-items-center" [searchText]=" searchText"></usersList>

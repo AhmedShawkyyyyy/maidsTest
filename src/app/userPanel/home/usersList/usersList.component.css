@@ -1,0 +1,100 @@
+:root {
+  --primary: #eb1616;
+  --secondary: #191c24;
+  --light: #6c7293;
+  --dark: #000000;
+}
+
+#card {
+  overflow: hidden;
+  background-color: var(--secondary);
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--light);
+  margin: 15px auto !important;
+  padding: 5px 5px;
+  transition: all 0.4s ease-in-out;
+  animation: zoomIn;
+  animation-duration: 1.5s;
+}
+
+#card:hover {
+  scale: 1.01;
+  box-shadow: 0px 0px 10px 1px rgba(108, 114, 147, 1);
+  & #userImage {
+    border: 2px solid var(--light);
+  }
+}
+
+#userImage {
+  border-radius: 50% !important;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  transition: all 0.5s ease-in-out;
+}
+
+#card-title {
+  font-weight: bold !important;
+}
+#userDetails {
+  background: var(--dark);
+  border: var(--light);
+  color: var(--light);
+}
+
+.cssbuttons-io-button {
+  background: var(--secondary);
+  color: var(--light);
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: var(--dark);
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}

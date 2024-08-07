@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand me-3 ms-3" routerLink="/home" animate__rollIn>Maids <span
+        [ngStyle]="{color:'var(--primary)'}">CC</span></a>
+    <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto  mb-lg-0">
+
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+            <span class="d-none d-lg-inline-flex">Users Options</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0">
+            <a class="dropdown-item" aria-current="page" (click)="FunctionAdd()">Add User</a>
+            <a href="#" class="dropdown-item">user list</a>
+            <!-- <a href="#" class="dropdown-item" routerLink="/users-in-table">users listed in Table</a> -->
+          </div>
+        </div>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="text" placeholder="search for users" aria-label="Search" id="search"
+          #searchInput (input)="onSearchTextChange()" onlyNumbers [notification]="'Please enter only Id with Number'" />
+      </form>
+
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
